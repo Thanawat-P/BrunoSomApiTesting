@@ -1,0 +1,34 @@
+info:
+  name: buy by stocks
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{BaseUrl}}/orders"
+  body:
+    type: json
+    data: |-
+      {
+        "itemId": 1,
+        "quantity": 1
+      }
+  auth:
+    type: bearer
+    token: "{{auth_token}}"
+
+runtime:
+  scripts:
+    - type: after-response
+      code: |-
+        const data = res.getBody();
+
+        if (data && data.orderId) {
+          bru.setEnvVar("current_order_id", data.orderId);
+        }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

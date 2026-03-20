@@ -1,0 +1,4 @@
+name: som-noodles
+variables:
+  - name: BaseUrl
+    value: http://localhost:5000
