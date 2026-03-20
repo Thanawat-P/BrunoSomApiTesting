@@ -1,18 +1,7 @@
 opencollection: 1.0.0
 
 info:
-  name: Som-test
-config:
-  proxy:
-    inherit: true
-    config:
-      protocol: http
-      hostname: ""
-      port: ""
-      auth:
-        username: ""
-        password: ""
-      bypassProxy: ""
+  name: Untitled Collection
 bundled: false
 extensions:
   bruno:

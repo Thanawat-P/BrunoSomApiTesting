@@ -1,21 +1,19 @@
 info:
-  name: Buy none
+  name: Login Error
   type: http
-  seq: 5
+  seq: 2
 
 http:
   method: POST
-  url: "{{BaseUrl}}/orders"
+  url: "{{BaseUrl}}/auth/login"
   body:
     type: json
     data: |-
       {
-        "itemId": 2,
-        "quantity": 0
+        "username": "none",
+        "password": "fulfill"
       }
-  auth:
-    type: bearer
-    token: "{{auth_token}}"
+  auth: inherit
 
 settings:
   encodeUrl: true

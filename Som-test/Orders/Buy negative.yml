@@ -1,7 +1,7 @@
 info:
-  name: Buy none
+  name: Buy negative
   type: http
-  seq: 5
+  seq: 8
 
 http:
   method: POST
@@ -10,8 +10,8 @@ http:
     type: json
     data: |-
       {
-        "itemId": 2,
-        "quantity": 0
+        "itemId": 1,
+        "quantity": -10
       }
   auth:
     type: bearer

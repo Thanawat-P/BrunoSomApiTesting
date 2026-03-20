@@ -154,3 +154,24 @@ Your task is to create a comprehensive Bruno collection that validates the entir
 
 ---
 *Good luck. Auntie Som is counting on you!* 🍜🔥
+
+## After Observation & Testing
+Login Function
+
+  Overall, the login process works correctly — only valid users are able to log in.
+
+View Menu
+  All menu items display correctly both before and after ordering.
+  
+  However:
+    When creating an order that exceeds available stock, the remaining stock becomes negative.
+    When creating an order with negative quantities, the stock incorrectly increases.
+
+Order Functions
+  
+  Users cannot purchase non-existent menu items (this works as expected).
+  Under normal conditions, ordering works correctly, but:
+  When creating an order with a total quantity of 0, the total price becomes -5.
+  If stock is not zero, users can purchase any quantity without limitation.
+  When ordering with negative quantities, stock increases and the total price becomes negative.
+  Unauthorized users (no token or invalid token) are still able to view orders.
